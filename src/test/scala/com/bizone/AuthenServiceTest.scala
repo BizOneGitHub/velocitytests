@@ -12,18 +12,30 @@ class AuthenServiceTest extends AbstractApiTest  with BeforeAndAfter  {
   var service: LoginService = _
   var logic: Logic = _
   var authenService: AuthenService = _
+  var user: User = _
 
   before {
+    resourceInitialize()
+
+    val jsonString = requestResource(CREATE_USER_RESOURCE)
+    user = GsonUtils.json2Class(jsonString, classOf[User])
+
     service = new RealLoginService()
     logic = new Logic()
     authenService = new AuthenService(service, logic)
   }
 
+  after {
+    println("Cleanup")
+    resourceCleanup()
+    // clean user
+    user = new User(null, null)
+  }
+
   test("test loginServiceReturnBoolean") {
-    val jsonString = requestResource(CREATE_USER_RESOURCE)
-    val user:User = GsonUtils.json2Class(jsonString, classOf[User])
-//
-//    // (3) access the service
+
+    println(s"loginServiceReturnBoolean ${user}")
+    // (3) access the service
     val johndoe = authenService.auth(user.name, user.password)
 
     // (4) verify the results
