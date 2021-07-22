@@ -1,6 +1,7 @@
 package com.bizone
 
 import com.bizone.{AuthenService, Logic, LoginService, User}
+import common.{AbstractApiTest, GsonUtils}
 import org.codehaus.jackson.map.ObjectMapper
 import org.junit.Assert.{assertEquals, assertFalse, assertTrue}
 import org.mockito.MockitoSugar
@@ -32,9 +33,9 @@ class AuthenServiceTest extends AbstractApiTest  with BeforeAndAfter  {
     user = new User(null, null)
   }
 
-  test("test loginServiceReturnBoolean") {
+  test("TestAuthWithUserRoot") {
 
-    println(s"loginServiceReturnBoolean ${user}")
+    println(s"TestAuthWithUserAdmin ${user}")
     // (3) access the service
     val johndoe = authenService.auth(user.name, user.password)
 

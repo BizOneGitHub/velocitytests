@@ -1,4 +1,4 @@
-package com.bizone
+package common
 
 import com.google.gson.GsonBuilder
 

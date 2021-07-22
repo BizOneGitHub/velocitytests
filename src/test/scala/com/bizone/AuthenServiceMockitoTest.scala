@@ -14,7 +14,7 @@ class AuthenServiceMockitoTest extends FunSuite  with BeforeAndAfter  with Mocki
     authenService = new AuthenService(service, logic)
   }
 
-  test("test loginServiceReturnBoolean") {
+  test("TestAuthWithUserAdmin") {
 
     // (2) setup: when someone logs in as "johndoe", the service should work;
     //            when they try to log in as "joehacker", it should fail.
@@ -31,7 +31,7 @@ class AuthenServiceMockitoTest extends FunSuite  with BeforeAndAfter  with Mocki
 
   }
 
-  test("test loginServiceReturnUser") {
+  test("TestAuthWithNoAdmin") {
 
     // (2) setup: when someone logs in as "johndoe", the service should work;
     //            when they try to log in as "joehacker", it should fail.
@@ -48,7 +48,7 @@ class AuthenServiceMockitoTest extends FunSuite  with BeforeAndAfter  with Mocki
 
   }
 
-  test("test checkNumberFail") {
+  test("TestCheckNumberReturnFail") {
 
     when(logic.total(1, 3)).thenReturn(4)
     // (3) access the service
@@ -57,14 +57,14 @@ class AuthenServiceMockitoTest extends FunSuite  with BeforeAndAfter  with Mocki
     assertFalse(checkNumberFalse)
   }
 
-  test("test checkNumberOK") {
+  test("TestCheckNumberReturnOK") {
 
     when(logic.total(1, 5)).thenReturn(11)
     val checkNumberTrue = authenService.checkNumber(1, 5)
     assertTrue(checkNumberTrue)
   }
 
-  test("test Throws an exception") {
+  test("TestCheckDivThrowException") {
     //    when(logic.div(1, 2)).thenReturn()
     doThrow(new IllegalArgumentException).when(logic).div(1, 2)
     //    assertThrows[ArithmeticException] {
@@ -75,13 +75,13 @@ class AuthenServiceMockitoTest extends FunSuite  with BeforeAndAfter  with Mocki
     }
   }
 
-  test("test doNothong") {
+  test("TestCheckShow") {
     // Sometimes used in void return methods or method that does not have side effects, or are not related to the unit testing you are doing
     doNothing.when(logic).show(1)
     authenService.checkShow(1)
   }
 
-  test("test verify exception error_code_011") {
+  test("TestCheckThrowDivReturnErrorCode001") {
     // Sometimes used in void return methods or method that does not have side effects, or are not related to the unit testing you are doing
     doThrow(new Exception).when(logic).div(1, 2)
     val checkNumberFalse = authenService.checkThrowDiv(1, 2)

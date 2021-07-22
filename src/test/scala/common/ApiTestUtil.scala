@@ -1,4 +1,4 @@
-package com.bizone
+package common
 
 import com.google.common.base.CaseFormat
 import org.apache.commons.lang3.StringUtils
@@ -15,8 +15,15 @@ object ApiTestUtil {
     }
     val pkgName = cls.getPackage.getName
     val clsName = cls.getSimpleName
-    val prefix = CaseFormat.UPPER_CAMEL.to(CaseFormat.LOWER_UNDERSCORE, clsName).replaceAll("_", "-")
-    val structName = String.format("%s/input/%s-%s", pkgName.replaceAll("\\.", "/"), prefix, resourceName)
+    val prefix = CaseFormat.UPPER_CAMEL
+      .to(CaseFormat.LOWER_UNDERSCORE, clsName)
+      .replaceAll("_", "-")
+    val structName = String.format(
+      "%s/input/%s-%s",
+      pkgName.replaceAll("\\.", "/"),
+      prefix,
+      resourceName
+    )
     return loadResource(structName)
   }
 

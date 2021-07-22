@@ -1,4 +1,4 @@
-package com.bizone
+package common
 
 import org.scalatest.FunSuite
 
