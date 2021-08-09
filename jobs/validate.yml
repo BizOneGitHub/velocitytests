@@ -2,14 +2,14 @@ steps:
   - checkout: self
     persistCredentials: true
   - task: Bash@3
-    displayName: 'set main branch'
+    displayName: 'set dev branch'
     inputs:
       targetType: 'inline'
       script: |
         git config --global user.email "duc.nguyen@bizone.com.vn"
         git config --global user.name "ducnguyen452021"
         git checkout -b develop origin/develop
-        git merge ${system.pullRequest.sourceBranch}
+        git merge origin/$(feature_branch)
         git add -A
         git commit -m 'build_release_commit'
   - script: sbt clean
