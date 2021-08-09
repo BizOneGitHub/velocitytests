@@ -37,7 +37,8 @@ ThisBuild / libraryDependencies ++= Seq(
   "org.mockito" %% "mockito-scala" % "1.16.37" % "test",
   "org.apache.spark" % "spark-core_2.10" % "1.0.0",
   "org.apache.commons" % "commons-lang3" % "3.12.0",
-  "com.google.code.gson" % "gson" % "2.8.7"
+  "com.google.code.gson" % "gson" % "2.8.7",
+
 )
 lazy val app = project
   .in(file("."))

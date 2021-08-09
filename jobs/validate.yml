@@ -14,3 +14,5 @@ steps:
         git commit -m 'build_release_commit'
   - script: sbt clean
     displayName: 'Running $ sbt clean'
+  - script: sbt test coverage coverageReport
+    displayName: 'Running $ scan line of code function coverageReport'
