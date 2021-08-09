@@ -16,7 +16,7 @@ jobs:
     pool:
       vmImage: $(vmImage)
     variables:
-      - template: variables/var-release.yml
+      - template: variables/var-pr.yml
     environment: DEV
     strategy:
       runOnce:
