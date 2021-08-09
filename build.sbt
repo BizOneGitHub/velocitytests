@@ -44,3 +44,9 @@ lazy val app = project
   .in(file("."))
 
 //unmanagedBase := baseDirectory.value / "lib"
+
+coverageMinimum := 40
+
+coverageFailOnMinimum := true
+
+coverageHighlighting := true
