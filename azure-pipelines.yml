@@ -9,7 +9,7 @@
 #      - develop
 
 trigger:
-  - feauture/VEL-1
+  - feature/VEL-1
 
 variables:
   - name: vmImage
