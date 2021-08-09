@@ -8,8 +8,9 @@ pr:
     include:
       - develop
 
-pool:
-  vmImage: ubuntu-latest
+variables:
+  - name: vmImage
+    value: 'ubuntu-latest'
 
 jobs:
   - deployment: ValidateJob
