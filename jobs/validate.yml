@@ -12,10 +12,9 @@ steps:
         git merge origin/$(feature_branch)
         git add -A
         git commit -m 'build_release_commit'
-        git push origin develop
   - script: sbt clean
     displayName: 'Running $ sbt clean'
       #- script: sbt coverage test coverageReport
       #  displayName: 'Running $ scan line of code function coverageReport'
-  - script: sbt test compile assembly
+  - script: sbt test compile
     displayName: 'Run $ sbt test compile assembly'
