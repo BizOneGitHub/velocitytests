@@ -1,0 +1,3 @@
+variables:
+  - name: feature_branch
+    value: 'feature/VEL-1'
