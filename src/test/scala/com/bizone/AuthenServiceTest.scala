@@ -1,11 +1,8 @@
 package com.bizone
 
-import com.bizone.{AuthenService, Logic, LoginService, User}
 import common.{AbstractApiTest, GsonUtils}
-import org.codehaus.jackson.map.ObjectMapper
-import org.junit.Assert.{assertEquals, assertFalse, assertTrue}
-import org.mockito.MockitoSugar
-import org.scalatest.{BeforeAndAfter, FunSuite}
+import org.junit.Assert.assertEquals
+import org.scalatest.BeforeAndAfter
 
 class AuthenServiceTest extends AbstractApiTest  with BeforeAndAfter  {
 
