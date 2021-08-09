@@ -1,4 +1,5 @@
 steps:
+<<<<<<< HEAD
   - checkout: self
     persistCredentials: true
   - task: Bash@3
