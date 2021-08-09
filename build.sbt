@@ -5,6 +5,8 @@ version := "0.1"
 scalaVersion := "2.12.10"
 
 
+autoCompilerPlugins := true
+
 lazy val commonSettings = Seq(
   name := "velocity",
   crossPaths := false,
