@@ -15,4 +15,5 @@ object GsonUtils {
   //    val obj2:util.ArrayList[Data] = GsonUtils.json2Java(json2, dataclass)
   def f(a: Int) = 10
   //
+  //
 }
