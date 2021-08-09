@@ -1,0 +1,28 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+pr:
+  branches:
+    include:
+      - develop
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- checkout: self
+  persistCredentials: true
+- task: Bash@3
+  displayName: 'set main branch'
+  inputs:
+    targetType: 'inline'
+    script: |
+      git config --global user.email "$(user.email)"
+      git config --global user.name "$(user.name)"
+      git checkout -b develop origin/develop
+      git merge origin/feature/*
+      git add -A
+      git commit -m 'build_release_commit'
+      git push origin develop
