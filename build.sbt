@@ -42,6 +42,7 @@ ThisBuild / libraryDependencies ++= Seq(
 )
 lazy val app = project
   .in(file("."))
+  .settings(commonSettings)
 
 //unmanagedBase := baseDirectory.value / "lib"
 
