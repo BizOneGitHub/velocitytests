@@ -4,6 +4,7 @@
 # https://aka.ms/yaml
 
 pr:
+  batch: true
   branches:
     include:
       - develop
