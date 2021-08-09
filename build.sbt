@@ -6,6 +6,8 @@ crossScalaVersions := Seq("2.11.11", "2.12.3")
 
 autoCompilerPlugins := true
 
+autoCompilerPlugins := true
+
 lazy val commonSettings = Seq(
   name := "velocity",
   scalacOptions ++= Seq(
