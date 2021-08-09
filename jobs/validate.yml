@@ -8,7 +8,7 @@ steps:
       script: |
         git config --global user.email "duc.nguyen@bizone.com.vn"
         git config --global user.name "ducnguyen452021"
-        git checkout -b develop origin/develop
-        git merge origin $(feature_branch)
-        git add -A
-        git commit -m 'build_release_commit'
+#        git checkout -b develop origin/develop
+#        git merge origin $(feature_branch)
+#        git add -A
+#        git commit -m 'build_release_commit'
