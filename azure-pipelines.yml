@@ -16,7 +16,7 @@ jobs:
     pool:
       vmImage: $(vmImage)
     variables:
-      - template: variables/var-pr.yml
+      - template: variables/var_pr.yml
     environment: DEV
     strategy:
       runOnce:
