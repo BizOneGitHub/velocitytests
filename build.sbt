@@ -9,7 +9,7 @@ autoCompilerPlugins := true
 autoCompilerPlugins := true
 
 lazy val commonSettings = Seq(
-  name := "velocity",
+  name := "velocity-test",
   scalacOptions ++= Seq(
     "-encoding",
     "utf8",
