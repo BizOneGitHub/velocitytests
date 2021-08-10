@@ -8,9 +8,6 @@ pr:
     include:
       - develop
 
-#trigger:
-#  - feauture/VEL-1
-
 variables:
   - name: vmImage
     value: 'ubuntu-latest'
