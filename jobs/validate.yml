@@ -13,4 +13,4 @@ steps:
   - script: sbt clean coverage test coverageReport
     displayName: 'Running $ scan line of code function coverageReport'
   - script: sbt assembly
-    displayName: 'Running $ assembly build jar'
+      displayName: 'Running $ assembly build jar'
