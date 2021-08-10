@@ -8,12 +8,10 @@ class AuthenService(service: LoginService, logic: Logic) {
   def this() = this(new RealLoginService, new Logic)
 
   def auth(userName: String, password: String): String = {
-    val isLogin = service.login(userName, password)
-    var result = ""
+    val isLogin: Boolean = service.login(userName, password)
+    var result = "NG"
     if(isLogin){
       result = "OK"
-    }else{
-      result = "NG"
     }
     return result
   }
