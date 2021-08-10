@@ -3,10 +3,13 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
-pr:
-  branches:
-    include:
-      - develop
+#pr:
+#  branches:
+#    include:
+#      - develop
+
+trigger:
+  - feauture/VEL-1
 
 variables:
   - name: vmImage
