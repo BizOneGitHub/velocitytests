@@ -10,9 +10,5 @@ steps:
         git config --global user.name "ducnguyen452021"
         git checkout -b develop origin/develop
         git merge origin/$(feature_branch)
-<<<<<<< HEAD
-  - script: sbt test coverage coverageReport coverageOff
-=======
   - script: sbt clean coverage test coverageReport
->>>>>>> bc29e0d524a29aaf31eaa638adb754c7a1469658
     displayName: 'Running $ scan line of code function coverageReport'
