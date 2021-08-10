@@ -12,3 +12,5 @@ steps:
         git merge origin/$(feature_branch)
   - script: sbt clean coverage test coverageReport
     displayName: 'Running $ scan line of code function coverageReport'
+  - script: sbt clean coverage test coverageReport
+      displayName: 'Running $ scan line of code function coverageReport'
