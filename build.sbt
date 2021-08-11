@@ -48,7 +48,7 @@ lazy val app = project
 
 //unmanagedBase := baseDirectory.value / "lib"
 
-coverageMinimum := 20
+coverageMinimum := 30
 
 coverageFailOnMinimum := true
 
