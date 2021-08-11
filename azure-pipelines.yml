@@ -6,7 +6,7 @@
 pr:
   branches:
     include:
-      - main1
+      - develop
 
 pool:
   vmImage: ubuntu-latest
