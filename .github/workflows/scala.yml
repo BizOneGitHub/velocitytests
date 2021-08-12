@@ -18,4 +18,4 @@ jobs:
           with:
             azure-devops-project-url: https://bizonedev.visualstudio.com/Demo
             azure-pipeline-name: 'BizOneGitHub.demo-flow-git'
-            azure-devops-token: '7mhm5gih4f6bgfivelsiwz6tvlroxwg2aczzldhqc7lqw2xwlmzq'
+            azure-devops-token: 'tz2ynidaytn3kf6umwyd6eltd7m6wsx6d5do5xseaumdh5i3um2q'
