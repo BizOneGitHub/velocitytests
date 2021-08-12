@@ -10,9 +10,7 @@ steps:
         git config --global user.name "ducnguyen452021"
         git checkout -b develop origin/develop
         git merge origin/$(feature_branch)
-        git merge origin/$(feature_branch)
-        git merge origin/$(feature_branch)
-  - script: sbt clean
-    displayName: 'Running $ sbt clean'
-  - script: sbt test coverage coverageReport
+  - script: sbt clean coverage test coverageReport
     displayName: 'Running $ scan line of code function coverageReport'
+  - script: sbt assembly
+    displayName: 'Running $ assembly build jar'
