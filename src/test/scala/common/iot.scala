@@ -1,7 +1,7 @@
 package common
 
 class iot {
-  def helperNodeList(): Unit ={
+  def hello(): Unit ={
     print("thithithi")
   }
 
