@@ -2,7 +2,7 @@ package common
 
 class Hello {
   def display(): Unit ={
-    println("dhsadghsakghfduik")
+    println("my first commit ")
   }
 
 }
